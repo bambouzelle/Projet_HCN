@@ -1,0 +1,22 @@
+{
+  "name": "bot_hcn",
+  "version": "1.0.0",
+  "description": "bot discord de meteo et qui va chercher des gifs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bambouzelle/Projet_HCN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bambouzelle/Projet_HCN/issues"
+  },
+  "homepage": "https://github.com/bambouzelle/Projet_HCN#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0"
+  }
+}
