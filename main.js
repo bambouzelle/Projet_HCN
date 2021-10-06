@@ -27,3 +27,17 @@ client.on("ready", function () {
         })
     });
 })
+
+client.on("interactionCreate", function (interaction) {
+    if(interaction.isCommand()){
+       switch (interaction.commandName){
+           /* case: "<nom de la commande>"
+            *   var {command} = require("<NomDecommand.js>");
+            *   break;
+            */
+           default:
+               interaction.reply("l'action de la commande n'est pas défini")
+               break;
+       }
+    }
+})
