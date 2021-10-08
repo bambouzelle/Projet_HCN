@@ -28,13 +28,21 @@ client.on("ready", function () {
     });
 })
 
-client.on("interactionCreate", function (interaction) {
+client.on("interactionCreate", async function (interaction) {
     if(interaction.isCommand()){
        switch (interaction.commandName){
-           /* case: "<nom de la commande>"
+           /* case "<nom de la commande>":
             *   var {command} = require("<NomDecommand.js>");
             *   break;
             */
+           case "ping":
+               const {ping} = require("./commands/Ping")
+               ping(interaction);
+               break;
+           case "gif":
+               const {gif} = require("./commands/Gif")
+               gif(interaction);
+               break;
            default:
                interaction.reply("l'action de la commande n'est pas défini")
                break;
