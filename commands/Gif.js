@@ -6,14 +6,15 @@ const giphy = require('giphy-api')(giphy_API_Key);
  * @param {CommandInteraction} interaction
  */
 function command(interaction) {
-    const motClef = interaction.options.get("mot_clef").value
-    if(motClef){
+
+    if(interaction.options.get("mot_clef")){
+        const motClef = interaction.options.get("mot_clef").value
         giphy.random(motClef).then(
             function (res) {
                 interaction.reply(res.data.url);
             }
         )
-    }else {
+    }else{
         giphy.random().then(
             function (res) {
                 interaction.reply(res.data.url);
