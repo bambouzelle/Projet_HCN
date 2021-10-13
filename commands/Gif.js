@@ -2,8 +2,11 @@ const {CommandInteraction} = require("discord.js")
 const {giphy_API_Key} = require("../config.json")
 const giphy = require('giphy-api')(giphy_API_Key);
 /**
+ * Fonction de la commande /gif sur discord
  *
- * @param {CommandInteraction} interaction
+ * @param {CommandInteraction} interaction - interaction ou la commande a été appeler
+ *
+ * @return void - renvoie un message dans le channel ou la commande a été appeler
  */
 function command(interaction) {
 
