@@ -1,8 +1,8 @@
 const {CommandInteraction} = require("discord.js")
-import { AsyncWeather } from '@cicciosgamino/openweather-apis'
-const weatherInstance = await new AsyncWeather()
+
+
 const {token_meteo} = require ("../config.json")
-const apiKey = require ('openweather-apis')(token_meteo)
+//const apiKey = require ('openweather-apis')(token_meteo)
 /**
  *
  * @param {CommandInteraction} interaction
@@ -10,11 +10,15 @@ const apiKey = require ('openweather-apis')(token_meteo)
  */
 function command(interaction)
 {
+
+    const { AsyncWeather } = require('@cicciosgamino/openweather-apis')
+    const weather = new AsyncWeather()
     weather.setLang('fr') 
     weather.setUnits('metric')
-    if (interaction.options.get("La_ville")) {
-        const La_ville = interaction.options.get("La_ville").value
-        weather.setCity('la_ville')
+    weather.setApiKey(token_meteo)
+    if (interaction.options.get("ville")) {
+        const La_ville = interaction.options.get("ville").value
+        weather.setCity(La_ville)
         weather.getTemperature()
         .then(result => console.log(`${typeof result} ${result}`))
         .catch(error => console.log(error))
@@ -24,3 +28,4 @@ function command(interaction)
     }
 
 }
+module.exports.meteo = command
