@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/bambouzelle/Projet_HCN#readme",
   "dependencies": {
-    "@cicciosgamino/openweather-apis": "^5.0.1",
     "@discordjs/rest": "^0.1.0-canary.0",
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.2.0",
-    "giphy-api": "^2.0.2"
+    "giphy-api": "^2.0.2",
+    "openweather-apis": "^4.4.2"
   }
 }
