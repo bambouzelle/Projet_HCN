@@ -43,6 +43,9 @@ client.on("interactionCreate", async function (interaction) {
                const {gif} = require("./commands/Gif")
                gif(interaction);
                break;
+            case "meteo":
+                const {meteo} = require("./commands/meteo")
+                meteo (interaction);
            default:
                interaction.reply("l'action de la commande n'est pas défini")
                break;
