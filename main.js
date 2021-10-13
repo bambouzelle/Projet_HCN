@@ -48,6 +48,10 @@ client.on("interactionCreate", async function (interaction) {
                help(interaction);
                break;
 
+            case "meteo":
+                const {meteo} = require("./commands/meteo")
+                meteo (interaction);
+                break;
            default:
                interaction.reply("l'action de la commande n'est pas défini")
                break;

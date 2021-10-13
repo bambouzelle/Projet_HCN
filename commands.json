@@ -19,6 +19,17 @@
       "name": "help",
       "description": "Aide pour utiliser le bot",
       "options": []
+    },{
+      "name": "meteo",
+      "description": "donne la meteo",
+       "options": [
+         {
+         "type" : 3,
+         "name" : "ville",
+         "description" : "mot clef pour la ville",
+         "required?" : true
+        }
+      ]
     }
   ]
 }
