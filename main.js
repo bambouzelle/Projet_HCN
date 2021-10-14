@@ -47,8 +47,7 @@ client.on("interactionCreate", async function (interaction) {
                const {help} = require("./commands/Help")
                help(interaction);
                break;
-
-            case "meteo":
+           case "meteo":
                 const {meteo} = require("./commands/meteo")
                 meteo (interaction);
                 break;
