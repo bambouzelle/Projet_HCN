@@ -33,6 +33,10 @@
           "required": true
         }
       ]
+    },{
+      "name": "help",
+      "description": "Aide pour utiliser le bot",
+      "options": []
     }
   ]
 }
