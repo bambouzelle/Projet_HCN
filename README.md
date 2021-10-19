@@ -75,5 +75,5 @@ Celui-ci a été entièrement réaliser en JS, avec l'utilisation des librairies
   
 4. Lancez votre bot (A exécuter dans le dossier du bot) :
   ```bash
-  $ node main.js
+  $ npm start
   ```
